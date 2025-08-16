@@ -53,27 +53,12 @@ const Signup = () => {
   return (
      <>
     
-        <div className='h-screen w-screen bg-gradient-to-r from-black to-blue-950'>
-            <div className='flex justify-between py-5 px-20 items-center'>
-          
-                  <div className='flex gap-3 items-center'>
-                    {/* <img src={logo} className='h-10 w-10 object-cover rounded-full' alt="" /> */}
-                    <h1 className='text-2xl text-orange-600'>Chat <span className='text-green-500'>Bot</span></h1>
-                  </div>
-                  <div className='flex gap-3'>
-                   <Link to={'/login'} className='text-2xl py-1 px-5 rounded border-2 border-white text-white'>Login</Link>
-                   <button className='text-2xl py-1 px-5 rounded bg-orange-600 border-2 border-white text-white'>Join now</button>
-                  </div>
-          
-              </div>
+        <div className='h-screen w-screen bg-gradient-to-r  from-black to-blue-950'>
+        
     
-               <div className='flex justify-center  items-center'>
-                
-                 
-                 
-            
+            <div className='flex justify-center  items-center'>   
             <form 
-            className='w-96 py-10 mt-14 rounded bg-gray-900 px-5 '
+            className='w-96 py-10 mt-20 rounded bg-gray-900 px-5 '
             onSubmit={handleSubmit(onsubmit)}>
                
                <div className='flex justify-center text-white mb-8 items-center flex-col'>
@@ -108,13 +93,17 @@ const Signup = () => {
                     {...register('password')}
                     />
 
+
+
                     {errorResponse &&(
                       <h1 className='text-sm text-red-500 text-center'>
                         {errorResponse}
                       </h1>)
                     }
     
-                    <button className='bg-orange-600 rounded mt-4  w-full py-3 flex justify-center items-center' >submit now</button>
+                    <button className='bg-blue-600 text-white rounded mt-4  w-full py-3 flex justify-center items-center' >Sign up</button>
+
+                    <h1 className='text-white mt-3 '>Already have an account? <Link className='text-blue-600' to={'/login'}>Login</Link></h1>
     
             </form>
                  
